@@ -1,0 +1,11 @@
+C:\Users\SW748_Admin\source\repos\AutoUpdateService\AutoUpdateService\bin\Debug\AutoUpdateService.exe.config
+C:\Users\SW748_Admin\source\repos\AutoUpdateService\AutoUpdateService\bin\Debug\AutoUpdateService.exe
+C:\Users\SW748_Admin\source\repos\AutoUpdateService\AutoUpdateService\bin\Debug\AutoUpdateService.pdb
+C:\Users\SW748_Admin\source\repos\AutoUpdateService\AutoUpdateService\obj\Debug\AutoUpdateService.csproj.AssemblyReference.cache
+C:\Users\SW748_Admin\source\repos\AutoUpdateService\AutoUpdateService\obj\Debug\AutoUpdateService.csproj.SuggestedBindingRedirects.cache
+C:\Users\SW748_Admin\source\repos\AutoUpdateService\AutoUpdateService\obj\Debug\AutoUpdateService.AutoUpdateService.resources
+C:\Users\SW748_Admin\source\repos\AutoUpdateService\AutoUpdateService\obj\Debug\AutoUpdateService.ProjectInstaller.resources
+C:\Users\SW748_Admin\source\repos\AutoUpdateService\AutoUpdateService\obj\Debug\AutoUpdateService.csproj.GenerateResource.cache
+C:\Users\SW748_Admin\source\repos\AutoUpdateService\AutoUpdateService\obj\Debug\AutoUpdateService.csproj.CoreCompileInputs.cache
+C:\Users\SW748_Admin\source\repos\AutoUpdateService\AutoUpdateService\obj\Debug\AutoUpdateService.exe
+C:\Users\SW748_Admin\source\repos\AutoUpdateService\AutoUpdateService\obj\Debug\AutoUpdateService.pdb

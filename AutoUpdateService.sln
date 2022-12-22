@@ -4,6 +4,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoUpdateService", "AutoUpdateService\AutoUpdateService.csproj", "{39FD24E9-6980-405F-B257-DDBDD30DDFD2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AB121462-F038-4916-A0C4-FBDB025653E2} = {AB121462-F038-4916-A0C4-FBDB025653E2}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helper", "Helper\Helper.csproj", "{AB121462-F038-4916-A0C4-FBDB025653E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "TestConsole\TestConsole.csproj", "{8B715C15-EDFE-460E-941C-45A39F5E47E3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AB121462-F038-4916-A0C4-FBDB025653E2} = {AB121462-F038-4916-A0C4-FBDB025653E2}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +25,14 @@ Global
 		{39FD24E9-6980-405F-B257-DDBDD30DDFD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39FD24E9-6980-405F-B257-DDBDD30DDFD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39FD24E9-6980-405F-B257-DDBDD30DDFD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB121462-F038-4916-A0C4-FBDB025653E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB121462-F038-4916-A0C4-FBDB025653E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB121462-F038-4916-A0C4-FBDB025653E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB121462-F038-4916-A0C4-FBDB025653E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B715C15-EDFE-460E-941C-45A39F5E47E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B715C15-EDFE-460E-941C-45A39F5E47E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B715C15-EDFE-460E-941C-45A39F5E47E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B715C15-EDFE-460E-941C-45A39F5E47E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
