@@ -1,8 +1,5 @@
 ﻿using Helper;
 using System;
-using System.IO.Pipes;
-using System.Net.NetworkInformation;
-using System.Net;
 using System.Threading.Tasks;
 
 namespace TestConsole
@@ -11,9 +8,9 @@ namespace TestConsole
     {
         static void Main(string[] args)
         {
-
-            Task<string> job = apiclient.GetJobFromAPIAsync(dnshelper.LookupServices());
-            Console.WriteLine(job.Result);
+            Task<apiresponse> job = apiclient.GetJobFromAPIAsync(dnshelper.LookupServices());
+            Console.WriteLine(job.Result.Task);
+            Console.WriteLine(job.Result.Scriptblock);
             Console.ReadLine();
         }
     }

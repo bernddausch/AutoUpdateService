@@ -8,12 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using System.IO;
 
 namespace Helper
 {
+	public class apiresponse
+	{
+		public int Task { get; set; }
+		public string Scriptblock { get; set; }
+	}
 	public class apiclient
 	{
-		public static async Task<string> GetJobFromAPIAsync(string url)
+		public static async Task<apiresponse> GetJobFromAPIAsync(string url)
 		{
 			// GetHostname
 			string domainName = IPGlobalProperties.GetIPGlobalProperties().DomainName;
@@ -42,8 +48,8 @@ namespace Helper
 				if (response.IsSuccessStatusCode)
 				{
 					var result = await response.Content.ReadAsStringAsync();
-					var test = JsonSerializer.Deserialize<Dictionary>(result);
-					return result;
+					var jobdata = JsonSerializer.Deserialize<apiresponse>(result);
+					return jobdata;
 				}
 				else
 				{
