@@ -12,6 +12,26 @@ using System.IO;
 
 namespace Helper
 {
+	public class LocalHostName
+	{
+		public string hostName;
+
+		public static string GetHostName()
+		{
+			// Get Local FQDN
+            string domainName = IPGlobalProperties.GetIPGlobalProperties().DomainName;
+            string hostName = Dns.GetHostName();
+
+            domainName = "." + domainName;
+            if (!hostName.EndsWith(domainName))  
+            {
+                // if hostname does not already include domain name, add the domain name Part
+                hostName += domainName;   
+            }
+
+            return hostName;
+        }
+    }
 	public class apiresponse
 	{
 		public int Task { get; set; }
@@ -21,20 +41,12 @@ namespace Helper
 	{
 		public static async Task<apiresponse> GetJobFromAPIAsync(string url)
 		{
-			// GetHostname
-			string domainName = IPGlobalProperties.GetIPGlobalProperties().DomainName;
-			string hostName = Dns.GetHostName();
+			
+            var values = new Dictionary<string, string> {
+                {"Computername", LocalHostName.GetHostName() }
+            };
 
-			domainName = "." + domainName;
-			if (!hostName.EndsWith(domainName))  // if hostname does not already include domain name
-			{
-				hostName += domainName;   // add the domain name part
-			}
-			var values = new Dictionary<string, string> {
-				{"Computername", hostName }
-			};
-	
-			string json = JsonSerializer.Serialize(values);
+            string json = JsonSerializer.Serialize(values);
 			var data = new StringContent(json, Encoding.UTF8, "application/json");
 
             // Create and Initialize Client
@@ -64,5 +76,26 @@ namespace Helper
 			
         }
 
+		public static async void SendStepToAPI(string url, int step)
+		{
+            // Create and Initialize Client
+            HttpClient WebClient = new HttpClient();
+            WebClient.BaseAddress = new System.Uri("http://" + url);
+            WebClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+            string json = $"{{\"Computername\": \"{LocalHostName.GetHostName()}\", \"SuccessStep\": {step} }}";
+
+            var data = new StringContent(json, Encoding.UTF8, "application/json");
+            try
+            {
+                var response = await WebClient.PostAsync("/jobdone", data);
+                if (response.IsSuccessStatusCode)
+                {
+                }
+            }
+            catch
+            {
+            }
+        }
 	}
 }
