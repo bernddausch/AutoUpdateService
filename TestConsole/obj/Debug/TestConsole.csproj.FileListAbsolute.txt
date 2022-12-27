@@ -30,3 +30,4 @@ C:\Users\SW748_Admin\source\repos\AutoUpdateService\TestConsole\bin\Debug\System
 C:\Users\SW748_Admin\source\repos\AutoUpdateService\TestConsole\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\SW748_Admin\source\repos\AutoUpdateService\TestConsole\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
 C:\Users\SW748_Admin\source\repos\AutoUpdateService\TestConsole\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\SW748_Admin\source\repos\AutoUpdateService\TestConsole\bin\Debug\System.Management.Automation.dll

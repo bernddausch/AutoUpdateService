@@ -34,3 +34,4 @@ C:\Users\SW748_Admin\source\repos\AutoUpdateService\Helper\bin\Debug\System.Text
 C:\Users\SW748_Admin\source\repos\AutoUpdateService\Helper\bin\Debug\System.Text.Json.xml
 C:\Users\SW748_Admin\source\repos\AutoUpdateService\Helper\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\SW748_Admin\source\repos\AutoUpdateService\Helper\bin\Debug\System.ValueTuple.xml
+C:\Users\SW748_Admin\source\repos\AutoUpdateService\Helper\bin\Debug\System.Management.Automation.dll
