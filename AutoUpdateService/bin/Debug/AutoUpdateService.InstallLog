@@ -1,0 +1,23 @@
+﻿Assembly C:\Users\SW748_Admin\source\repos\AutoUpdateService\AutoUpdateService\bin\Debug\AutoUpdateService.exe wird installiert.
+Betroffene Parameter:
+   logtoconsole = 
+   assemblypath = C:\Users\SW748_Admin\source\repos\AutoUpdateService\AutoUpdateService\bin\Debug\AutoUpdateService.exe
+   logfile = C:\Users\SW748_Admin\source\repos\AutoUpdateService\AutoUpdateService\bin\Debug\AutoUpdateService.InstallLog
+Assembly C:\Users\SW748_Admin\source\repos\AutoUpdateService\AutoUpdateService\bin\Debug\AutoUpdateService.exe wird zurückgesetzt.
+Betroffene Parameter:
+   logtoconsole = 
+   assemblypath = C:\Users\SW748_Admin\source\repos\AutoUpdateService\AutoUpdateService\bin\Debug\AutoUpdateService.exe
+   logfile = C:\Users\SW748_Admin\source\repos\AutoUpdateService\AutoUpdateService\bin\Debug\AutoUpdateService.InstallLog
+Assembly C:\Users\SW748_Admin\source\repos\AutoUpdateService\AutoUpdateService\bin\Debug\AutoUpdateService.exe wird installiert.
+Betroffene Parameter:
+   logtoconsole = 
+   assemblypath = C:\Users\SW748_Admin\source\repos\AutoUpdateService\AutoUpdateService\bin\Debug\AutoUpdateService.exe
+   logfile = C:\Users\SW748_Admin\source\repos\AutoUpdateService\AutoUpdateService\bin\Debug\AutoUpdateService.InstallLog
+Dienst SchuWaAutoUpdateService wird installiert...
+Dienst SchuWaAutoUpdateService wurde installiert.
+Die EventLog-Quelle SchuWaAutoUpdateService im Protokoll Application wird erstellt...
+Assembly C:\Users\SW748_Admin\source\repos\AutoUpdateService\AutoUpdateService\bin\Debug\AutoUpdateService.exe wird ausgeführt.
+Betroffene Parameter:
+   logtoconsole = 
+   assemblypath = C:\Users\SW748_Admin\source\repos\AutoUpdateService\AutoUpdateService\bin\Debug\AutoUpdateService.exe
+   logfile = C:\Users\SW748_Admin\source\repos\AutoUpdateService\AutoUpdateService\bin\Debug\AutoUpdateService.InstallLog

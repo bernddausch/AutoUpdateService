@@ -20,9 +20,9 @@ namespace TestConsole
                     Console.WriteLine(job.Result.Scriptblock);
                     Thread.Sleep(2000);
                     psworker worker = new psworker();
-                    worker.Connect();
+                    //worker.Connect();
                     worker.RunScriptBlock("Start-SWSoftwareUpdate");
-                    worker.Close();
+                    //worker.Close();
                     apiclient.SendStepToAPI(dnshelper.LookupServices(), CurrentTaks);
                 }
 

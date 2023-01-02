@@ -1,0 +1,3 @@
+C:\Users\SW748_Admin\source\repos\AutoUpdateService\TestConsole\obj\x64\Release\TestConsole.csproj.AssemblyReference.cache
+C:\Users\SW748_Admin\source\repos\AutoUpdateService\TestConsole\obj\x64\Release\TestConsole.csproj.SuggestedBindingRedirects.cache
+C:\Users\SW748_Admin\source\repos\AutoUpdateService\TestConsole\obj\x64\Release\TestConsole.csproj.CoreCompileInputs.cache

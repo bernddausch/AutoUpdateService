@@ -34,3 +34,4 @@ C:\Users\SW748_Admin\source\repos\AutoUpdateService\Helper\obj\Release\Helper.cs
 C:\Users\SW748_Admin\source\repos\AutoUpdateService\Helper\obj\Release\Helper.csproj.CopyComplete
 C:\Users\SW748_Admin\source\repos\AutoUpdateService\Helper\obj\Release\Helper.dll
 C:\Users\SW748_Admin\source\repos\AutoUpdateService\Helper\obj\Release\Helper.pdb
+C:\Users\SW748_Admin\source\repos\AutoUpdateService\Helper\bin\Release\System.Management.Automation.dll

@@ -1,7 +1,9 @@
 ﻿using DnsClient;
 using Microsoft.Win32;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Management.Automation;
 using System.Net.NetworkInformation;
 
 

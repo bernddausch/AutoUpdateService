@@ -1,0 +1,31 @@
+﻿
+Eine transaktive Installation wird ausgeführt.
+
+Die Installationsphase wird gestartet.
+Die Protokolldatei enthält den Fortschritt der Assembly C:\Users\SW748_Admin\source\repos\AutoUpdateService\AutoUpdateService\bin\Debug\AutoUpdateService.exe.
+Die Datei befindet sich in C:\Users\SW748_Admin\source\repos\AutoUpdateService\AutoUpdateService\bin\Debug\AutoUpdateService.InstallLog.
+
+Während der Installationsphase ist eine Ausnahme aufgetreten.
+System.InvalidOperationException: Die Diensteinstallation in der ausführbaren Datei C:\Users\SW748_Admin\source\repos\AutoUpdateService\AutoUpdateService\bin\Debug\AutoUpdateService.exe wurde vom Benutzer abgebrochen.
+
+Die Rollbackphase der Installation wird gestartet.
+Die Protokolldatei enthält den Fortschritt der Assembly C:\Users\SW748_Admin\source\repos\AutoUpdateService\AutoUpdateService\bin\Debug\AutoUpdateService.exe.
+Die Datei befindet sich in C:\Users\SW748_Admin\source\repos\AutoUpdateService\AutoUpdateService\bin\Debug\AutoUpdateService.InstallLog.
+
+Die Rollbackphase wurde erfolgreich abgeschlossen.
+
+Die transaktive Installation ist abgeschlossen.
+
+Eine transaktive Installation wird ausgeführt.
+
+Die Installationsphase wird gestartet.
+Die Protokolldatei enthält den Fortschritt der Assembly C:\Users\SW748_Admin\source\repos\AutoUpdateService\AutoUpdateService\bin\Debug\AutoUpdateService.exe.
+Die Datei befindet sich in C:\Users\SW748_Admin\source\repos\AutoUpdateService\AutoUpdateService\bin\Debug\AutoUpdateService.InstallLog.
+
+Die Installationsphase ist abgeschlossen, und die Commitphase beginnt.
+Die Protokolldatei enthält den Fortschritt der Assembly C:\Users\SW748_Admin\source\repos\AutoUpdateService\AutoUpdateService\bin\Debug\AutoUpdateService.exe.
+Die Datei befindet sich in C:\Users\SW748_Admin\source\repos\AutoUpdateService\AutoUpdateService\bin\Debug\AutoUpdateService.InstallLog.
+
+Die Commitphase wurde erfolgreich abgeschlossen.
+
+Die transaktive Installation ist abgeschlossen.

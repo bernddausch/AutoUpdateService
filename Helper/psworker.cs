@@ -1,38 +1,22 @@
-﻿using System.Management.Automation;
-using System.Management.Automation.Runspaces;
+﻿using System.Management.Automation.Runspaces;
 
 namespace Helper
 {
     public class psworker
     {
-        public static Runspace MyRunSpace = RunspaceFactory.CreateRunspace();
-
-        public void Connect()
+        public string RunScriptBlock(string Command)
         {
+            Runspace MyRunSpace = RunspaceFactory.CreateRunspace();
             MyRunSpace.Open();
-        }
-
-        public string RunScriptBlock(string ScriptBlock)
-        {
+            string script = $"Import-Module -Name SWPatchDay;Start-Sleep -seconds 10;{Command}";
             Pipeline pipeline = MyRunSpace.CreatePipeline();
-            pipeline.Commands.AddScript("Set-ExecutionPolicy unrestricted -force -confirm:$false");
-            pipeline.Commands.AddScript("Import-Module -Name SWPatchDay");
-            pipeline.Commands.AddScript(ScriptBlock);
-
-                var result = pipeline.Invoke();
-
-                foreach (PSObject Entry in result)
-                {
-                    if (Entry != null)
-                    {
-                        return Entry.Properties["Name"].Value.ToString();
-                    }
-                }
-            
-            return "Not Found";
+            pipeline.Commands.AddScript(script);
+            var result = pipeline.Invoke();
+            var pserrors = pipeline.Error.ReadToEnd();
+            MyRunSpace.Close();
+            return "";
         }
 
-        public void Close() { }
     
     }
 }
