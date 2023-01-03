@@ -4,9 +4,6 @@ using System.Threading.Tasks;
 using System.Timers;
 using System.Management.Automation.Runspaces;
 using System.Diagnostics;
-using System.Reflection;
-using System.Xml.Linq;
-using System.Management.Automation;
 
 namespace AutoUpdateService
 {
@@ -20,40 +17,33 @@ namespace AutoUpdateService
         public void OnTimer(object sender, ElapsedEventArgs args)
         {
             // Get Job from API
-            /*Task<apiresponse> job = apiclient.GetJobFromAPIAsync(dnshelper.LookupServices());
+            Task<apiresponse> job = apiclient.GetJobFromAPIAsync(dnshelper.LookupServices());
             int CurrentTask = (int)job.Result.Task;
             string ScriptBlock = job.Result.Scriptblock;
-            */
+            string script = $"{ScriptBlock} -Step {CurrentTask}";
+
+            /*var appLog = new EventLog("Application");
+            appLog.Source = "MySource";
+            appLog.WriteEntry($"{script}");
+            appLog.WriteEntry("test");*/
+
+            // Initialize Runspace and Load Modules
             InitialSessionState initial = InitialSessionState.CreateDefault();
             string[] modules = new string[] { "SWPatchday", "SWStandardTools", "PackageManagement" };
             initial.ImportPSModule(modules);
 
 
-            //string script = $"{ScriptBlock} -Step {CurrentTask}";
-            
-            var appLog = new EventLog("Application");
-            appLog.Source = "MySource";
-            //appLog.WriteEntry($"{script}");
-            appLog.WriteEntry("test");
+            // Create and Open the Runspace
             Runspace MyRunSpace = RunspaceFactory.CreateRunspace(initial);
             MyRunSpace.Open();
     
+            // Initial Pipeline add Commands and run it
             Pipeline pipeline = MyRunSpace.CreatePipeline();
-            pipeline.Commands.AddScript("Install-PackageProvider -name chocolatey -force -confirm:$false");
-            pipeline.Commands.AddScript("Register-PackageSource -Name SchuWa-Repo -ProviderName Chocolatey -Location http://repo.servicezone.local/nuget/nuget -Trusted -force -confirm:$false");
-
-            pipeline.Commands.AddScript(@"get-packageSource  | out-file c:\\test2.txt");
-            pipeline.Commands.AddScript(@"Start-UpdSoftwareUpdate");
-
-            //pipeline.Commands.AddScript(@"$PSVersionTable | out-file c:\\test2.txt");
-            //pipeline.Commands.AddScript(script);
+            pipeline.Commands.AddScript(script);
 
             var result = pipeline.Invoke();
 
-               
-
-            
-            
+            MyRunSpace.Close();
         }
 
         protected override void OnStart(string[] args)
